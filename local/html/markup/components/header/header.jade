@@ -1,0 +1,26 @@
+mixin header(datas)
+	header.header
+		.container.header__flex-contain
+			.header__left-logos
+				a.logo__link(href='http://www.bolshoi.ru/', rel="nofollow noopener", target="_blank") 
+						img.logo__img.logo__img_main( width="89" height="89" src="%=static=%img/general/Bolshoi_logo.png", alt="Большой театр") 
+				a.logo__link(href='https://www.abbyy.com/ru-ru/', rel="nofollow noopener", target="_blank")
+						img.logo__img(src="%=static=%img/general/ABBYY_Logo.png", alt="ABBY")
+			ul.top-m 
+				
+				li.top-m__item
+					a.top-m__link(href="#", rel="nofollow noopener", target="_blank") О проекте
+				li.top-m__item
+					a.top-m__link(href="#", rel="nofollow noopener", target="_blank") Условия участия
+				li.top-m__item
+					a.top-m__link(href="#", rel="nofollow noopener", target="_blank") Рейтинги 
+				li.top-m__item
+					a.top-m__link(href="#", rel="nofollow noopener", target="_blank") Пресса
+			a.btn.btn_transp.btn_header.js-fansibox.mob-hide(href="#login", target="_blank") Вход/регистрация
+
+			.header__right-socials
+				a.header__soc-item.header__soc-item_fb(href='https://www.facebook.com/openbolshoi/', rel="nofollow noopener", target="_blank") 
+						img.header__soc-pic-fb(src="%=static=%img/general/fb.svg", alt="facebook") 
+				a.header__soc-item.header__soc-item_vk(href='https://vk.com/openbolshoi', rel="nofollow noopener", target="_blank") 
+						img.header__soc-pic-vk(src="%=static=%img/general/vk.svg", alt="Vk")
+			.show-menu

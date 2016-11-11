@@ -1,0 +1,16 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

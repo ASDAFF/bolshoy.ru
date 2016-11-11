@@ -1,0 +1,1 @@
+<h1 class="flai fon-slider__main-title">Открой <br>историю Большого</h1>

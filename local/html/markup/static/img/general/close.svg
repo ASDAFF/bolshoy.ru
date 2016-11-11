@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.344" height="28.344" viewBox="0 0 28.344 28.344">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #bb890b;
+        stroke: #bb890b;
+        stroke-width: 0.5px;
+        fill-rule: evenodd;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <path id="x_copy" data-name="x copy" class="cls-1" d="M281.646,13.353l0.708-.707,25,25-0.708.707Zm1.06,24.657-0.716-.716,25.3-25.3,0.716,0.716Z" transform="translate(-280.656 -11)"/>
+</svg>

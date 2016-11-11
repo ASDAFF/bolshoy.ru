@@ -1,0 +1,188 @@
+doctype html
+html(class="no-js", lang="ru")
+
+		include ../components/head/head
+		include ../components/headerv/headerv
+		include ../components/verifier-management/verifier-management
+		include ../components/footer/footer
+
+		head
+				+head(head.defaults)
+		body.page
+				|%=symbols=%
+
+				section.page__wrapper
+
+					//- Include your components here
+					+headerv()
+					section.verifa-sec 
+						.container
+							+verifier-management()
+							h2.verifa-sec__title Как начать работу
+
+					section.how-begin
+						.how-begin__step.how-begin__step_noactive
+							.container.container_how-begin
+								.how-begin__num-step 1
+								p.how-begin__texts Перед началом проверки внимательно ознакомьтесь с 
+									b инструкцией.
+								a(href="#").btn.btn_header.btn_how-begin скачать инструкцию
+						.how-begin__step.how-begin__step_noactive
+							.container.container_how-begin
+								.how-begin__num-step 2
+								p.how-begin__texts Для работы вам понадобится стационарный компьютер на ОС Windows. Если у вас еще не установлена программа 
+									strong ABBYY FineReader 12 Professional Edition
+									| , скачайте ее и установите на свой компьютер. Для корректной проверки должна быть установлена именно указанная 12-ая версия программы. 
+								a(href="#").btn.btn_header.btn_how-begin Установить ABBYY FineReader
+						.how-begin__step.how-begin__step_noactive
+							.container.container_how-begin
+								.how-begin__num-step 3
+								p.how-begin__texts 
+									b Получите серийный номер 
+									|  и активируйте программу. 
+								a(href="#").btn.btn_header.btn_how-begin Получить серийный номер 
+						.how-begin__step
+							.container.container_how-begin
+								.how-begin__num-step.how-begin__top 4
+								.how-begin__texts
+									p.how-begin__texts_minmarg 
+										b Приступите к верификации.
+										| Скачайте один из документов в разделе, нажав на кнопку «Получить пакет». Один пакет «весит» в среднем 
+										i 20 МБ. 
+									p.how-begin__texts_minmarg
+										| Скачанный пакет отобразится в таблице и ему будет присвоен статус «В работе».   Обратите внимание, что вы можете проверять 
+										i одновременно только один пакет.
+										| Проверьте пакет, следуя инструкции.
+									p.how-begin__texts_minmarg
+										| Мы просим вас очень внимательно вычитывать текст. Проверенный текст должен на 100% соответствовать оригиналу. На проверку вам отводится 48 часов. 
+										| Вычитанный вами пакет в течение 5 (пяти) рабочих дней будет проверен администратором, который удостоверится, что вы не допустили большого количества ошибок и правильно сохранили пакет. За правильно распознанный пакет участник получает 5 баллов. Если пакет отклонен, у участника вычитают 10 баллов.
+									p.how-begin__texts_minmarg
+										| Чтобы скачать следующий, завершите проверку предыдущего и загрузите его на сайт, нажав на кнопку «Отправить пакет».
+									p.how-begin__texts_minmarg
+										| Теперь вы можете взять новый пакет на проверку.
+								a(href="#").btn.btn_header.btn_how-begin.how-begin__top Получить пакет
+							
+
+
+					.page__buffer
+
+				.page__footer
+						+footer()
+				.window-wrap#login
+					form.forma(action='#')
+						
+						input.forma__inpt#emlail(type='email', placeholder='Электронная почта *')
+						input.forma__inpt#pass(type='text', placeholder='Пароль *')
+						
+
+						.soc-wide-login.nopad
+							p 
+								a(href="#restore_password").js-fansibox.forma__link  Я забыл пароль
+							button.forma__send.btn Войти
+							p
+							p.soc-wide-login__text Зарегистрироваться с помощью:
+							.soc-wide-login__wrap 
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'vk', className: 'soc-wide-login__vk'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'ok', className: 'soc-wide-login__ok'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'mail', className: 'soc-wide-login__mail'})	
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'fb', className: 'soc-wide-login__fb'})
+							p
+							p 
+								a(href="#login").js-fansibox.forma__link Зарегистрироваться
+
+				.window-wrap#restore_password
+					form.forma(action='#')
+						
+						input#emlail2.forma__inpt(type='email', placeholder='Электронная почта *')
+						input#pass2.forma__inpt(type='text', placeholder='Пароль *')
+						
+
+						.soc-wide-login.nopad
+							button.forma__send.btn Отправить пароль
+							button.forma__send.btn Войти
+							p
+							p.soc-wide-login__text Зарегистрироваться с помощью:
+							.soc-wide-login__wrap 
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'vk', className: 'soc-wide-login__vk'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'ok', className: 'soc-wide-login__ok'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'mail', className: 'soc-wide-login__mail'})
+								a.soc-wide-login__item(href="#")  
+									!= jadeHelpers.Icon.call(locals, {iconName: 'fb', className: 'soc-wide-login__fb'})
+							p
+							p 
+								a(href="#login").js-fansibox.forma__link Зарегистрироваться				
+						
+				.window-wrap#join
+					form.forma(action='#')
+						p.forma__notif Заполняя эту форму, вы соглашаетесь c 
+							a(href="#agree").js-fansibox.forma__agree условиями
+							|  обработки персональных данных
+						input#fio.forma__inpt.forma__inpt_error(type='text', placeholder='ФИО *')
+						input#eml21.forma__inpt(type='email', placeholder='Электронная почта *')
+						input#country.forma__inpt(type='text', placeholder='Cтрана *')
+						input#town.forma__inpt(type='text', placeholder='Город *')
+						input#phone3.forma__inpt(type='tel', placeholder='Телефон')
+ 
+						.filter__checkbox
+							input.filter__chboxhide(type='checkbox', name='subsc', id="sub")
+							label.filter__labl#igra2(for='sub') 
+							span.filter__textchbox#ch1 Подписка на новости
+						.filter__checkbox
+							input.filter__chboxhide(type='checkbox', name='participation', id="participation")
+							label.filter__labl#parti_label(for='participation') 
+							span.filter__textchbox#ch2 Согласен с Условиями участия*  
+							
+						button.forma__send.btn Присоединиться
+
+						.soc-wide-login
+							p.soc-wide-login__text Зарегистрироваться с помощью:
+							.soc-wide-login__wrap 
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'vk', className: 'soc-wide-login__vk'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'ok', className: 'soc-wide-login__ok'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'mail', className: 'soc-wide-login__mail'})	
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'fb', className: 'soc-wide-login__fb'})		
+						
+						
+
+				.window-wrap#agree  
+					a(href="#join").js-fansibox Назад
+					p Компания ABBYY означает:
+						<br>
+						| ООО «Аби», 127273, г. Москва, ул. Отрадная, дом 2Б, строение 6, офис 12, для корреспонденции: 127273, а/я 32
+						| Участник проекта, регистрируясь на сайте проекта, дат свое добровольное согласие на сбор, накопление, хранение, обработку, проверку, уточнение, обезличивание, уничтожение своих персональных данных на любом этапе конкурса с использованием средств автоматизации или без таковых в соответствии с ФЗ «О персональных данных».
+						<br> 
+						| Оргкомитет проекта собирает, накапливает, хранит, обрабатывает, проверяет, уточняет, обезличивает и уничтожает персональные данные исключительно в целях организации и проведения проекта. Персональные данные участников, полученные в ходе проведения проекта, не будут использованы в иных целях или переданы третьим лицам. Данное согласие действует  до 31 декабря 2018 года.
+						<br>
+						| Участник проекта может отозвать свое согласие на совершение всех вышеуказанных действий в любой момент, но при этом он перестает участвовать в проекте.
+					
+				.window-wrap.window-wrap__center#thanks
+					h3.window-wrap__title Спасибо за регистрацию!
+					p Вы успешно зарегистрировались! Все подробности мы отправим отдельным письмом во время старта проекта.
+
+					// Google Tag Manager
+					noscript
+						iframe(src='//www.googletagmanager.com/ns.html?id=GTM-WQBZMV', height='0', width='0', style='display:none;visibility:hidden')
+					script.
+						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+						'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+						})(window,document,'script','dataLayer','GTM-WQBZMV');
+					// End Google Tag Manager
+
+				script(src='%=static=%js/separate-js/svg4everybody.min.js')
+				script svg4everybody();
+
+				//- Main scripts. You can replace it, but I recommend you to leave it here
+				script(src='%=static=%js/main%=hash=%%=min=%.js')

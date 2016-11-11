@@ -1,0 +1,33 @@
+mixin verifier-management(data)
+	.verifa-sec__wrap
+		.verificator
+			h3.verificator__name Верификатор
+			form(action="#").verificator__form
+				.verificator__left
+					.verificator__user-avatar
+						img(src="%=static=%img/general/user-pic.png", alt="").verificator__userpic-ava 
+						input#upload.outtaHere.inputfile(type='file', data-multiple-caption='{count} files selected', multiple='')
+						label(for='upload').verificator__change-ava
+							span Изменить фото 
+				.verificator__right
+					input( value="Константин Константинопольский" disabled).verificator__whence.verificator__user-field.verificator__user-name
+					input( value="Петропавловск-Камчатский, Новая Зеландия" disabled ).verificator__whence.verificator__user-field 
+					input(type="email",  value="ivamov@mail.com", disabled).verificator__user-field.verificator__name-user 
+					.verificator__line.verificator_line-border
+						span.verificator__passtext Пароль
+						input(type="password",  placeholder="****", disabled).verificator__password 
+					.verificator__line.verificator__line_save
+						button(type="reset").verificator__btn Отменить 
+						button(type="button").verificator__btn#verificator-save Cохранить
+						.verificator__profil-edit-btn#edit-profil Редактировать профиль
+		.verif-raiting
+			.verif-raiting__place
+				span.verif-raiting__big-num.verif-raiting__big-num_lavr 25
+				span.verif-raiting__descript Место <br> в рейтинге
+			.verif-raiting__billboard
+				span.verif-raiting__big-num 278
+				span.verif-raiting__descript афиш и программ <br> проверено
+			.verif-raiting__points
+				span.verif-raiting__big-num -5
+				span.verif-raiting__descript Баллов
+	// .verifa-sec__wraps

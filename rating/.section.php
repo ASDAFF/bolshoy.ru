@@ -1,0 +1,5 @@
+<?
+$sSectionName = "Рейтинг";
+$arDirProperties = array(
+);
+?>

@@ -1,0 +1,348 @@
+doctype html
+html(class="no-js", lang="ru")
+
+		include ../components/head/head
+		include ../components/header/header
+		include ../components/example/example
+		include ../components/footer/footer
+
+		head
+				+head(head.defaults)
+		body.page
+				|%=symbols=%
+
+				section.page__wrapper
+
+					//- Include your components here
+					+header()
+					section.fon-slider
+						.container.fon-slider__container
+							
+							.cont-flex
+								.count-us.flai
+									
+									.count-us__wrap
+										!= jadeHelpers.Icon.call(locals, {iconName: 'world', className: 'world-pic-top'})
+										.count-us__right
+											span.count-us__text Нас
+											span.count-us__num 9000 
+
+							h1.flai.fon-slider__main-title Открой <br>историю Большого
+
+							p.fon-slider__texts.mob-hide Дебют Майи Плисецкой, премьера «Бориса Годунова», первый успех «Лебединого озера» — каждое событие Большого живет в тысячах программ и афиш. Мы приглашаем вас стать участниками уникального проекта и первыми увидеть эти страницы. Все вместе при помощи современных технологий мы откроем историю главного театра страны, и ценнейшая информация из исторических документов будет доступна каждому в электронном архиве КАМИС!
+
+							p.fon-slider__texts.mob-hide Стать волонтером проекта просто — регистрируйтесь на сайте, скачивайте ABBYY FineReader и проверяйте отсканированные материалы.
+
+							p.fon-slider__texts.pc-hide Дебют Майи Плисецкой, премьера «Бориса Годунова», первый успех «Лебединого озера» — каждое событие Большого живет в тысячах программ и афиш. Мы приглашаем вас стать участниками уникального проекта и первыми увидеть эти страницы. Все вместе при помощи современных технологий мы откроем историю главного театра страны, и ценнейшая информация из исторических документов будет доступна каждому в электронном архиве КАМИС!  
+
+							.fon-slider__share-row
+								a(href="#join").js-fansibox.btn.btn-transp Присоединиться
+								.fon-slider__share-frends
+									p.fon-slider__share-text РАССКАЗАТЬ ДРУЗЬЯМ
+									.fon-slider__socials-wrap 
+										.pluso.pluso-pc(data-services='facebook,vkontakte,odnoklassniki,twitter,linkedin,google', data-options='big,square,line,horizontal,nocounter,theme=04', data-background='transparent')
+										// большие экраны
+										.pluso.pluso-mob(data-background='transparent', data-options='medium,square,line,horizontal,nocounter,theme=04', data-services='facebook,vkontakte,odnoklassniki,twitter,linkedin,google')
+							.down-center
+								a(href="#video").js-down-section
+									!= jadeHelpers.Icon.call(locals, {iconName: 'arr-down', className: 'arr-down__pic'})
+
+					//Этот блок показываектся только на мониторар меньше 1000 - то есть мобилки планшеты				
+					section.coutn-users-mobile
+						.container.coutn-users-mobile__wrap
+							!= jadeHelpers.Icon.call(locals, {iconName: 'world', className: 'world-pic'})
+							.cout-mob__wrap
+								span.cout-mobus нас
+								span.cout-mobcount.flai 00 000
+
+					section.video-sec#video
+						.container.video-sec__container 
+							.video-sec__wrap
+								.video-sec__tube
+									iframe.video-sec__iframe( height='489', src='https://www.youtube.com/embed/qVxUWl-BQAg', frameborder='0', allowfullscreen='')
+								.video-sec__text-right.flai
+									p.video-sec__textmain «Место для цитаты участника видео, например: Каждое событие Большого театра живет в тысячах программ <br> и афиш»
+										span.video-sec__textmini Имя Фамилия, <br>должность
+
+					// .map - только на больших экранах 1000px+
+					section.map
+						.container
+							h2.map__title Участники проекта на карте мира
+						.map__layer
+							img(src="%=static=%img/general/map.jpg", height="492" alt="")
+						.map__under
+							.container.map__container
+								.map__clasters.flai
+									.map__claster.map__claster_size4 2 800
+									.map__claster.map__claster_size3 800
+									.map__claster.map__claster_size2 80
+									.map__claster.map__claster_size1 9
+									.map__claster.map__claster_picture 
+										img(src="%=static=%img/general/clast-round.png", alt="").map__claster-svg
+								.map__num-left
+									.cout-mob__wrap
+										span.cout-mobcount.cout-mobcount_map.flai 00 000
+										span.cout-mobus.cout-mobus_map афиш и программ <br> проверено
+									.cout-mob__wrap.cout-mob__wrap_purpl
+										span.cout-mobcount.cout-mobcount_map.flai 10 000
+										span.cout-mobus.cout-mobus_map участников
+								.map__num-right
+									a(href="#join").js-fansibox.btn.btn-bordo.btn-bordo_map Присоединиться
+
+					section.raiting
+						.container.container_raiting
+							h2.raiting__title Рейтинг участников
+							.raiting__wrap
+								.raiting__line.raiting__line_head
+									.raiting__col1
+										span.raiting__tablehead место
+									.raiting__col2
+										span.raiting__tablehead Участник
+									.raiting__col3
+										span.raiting__tablehead Программы и афишы
+
+								.raiting__line
+									.raiting__col1
+										.raiting__place 1
+									.raiting__col2
+										img(src="%=static=%img/general/user1.png", alt="").raiting__userpic
+										.raiting__wrapin-col2
+											p.raiting__famili Константин Долгополов,
+											p.raiting__town Петропавловск-Камчатский, Новая Зеландия
+									.raiting__col3
+										p.raiting__balls 78 976
+
+								.raiting__line
+									.raiting__col1
+										.raiting__place 2
+									.raiting__col2
+										img(src="%=static=%img/general/user1.png", alt="").raiting__userpic
+										.raiting__wrapin-col2
+											p.raiting__famili Алексей дегтерев,
+											p.raiting__town Сочи, Росссия
+									.raiting__col3
+										p.raiting__balls 11024 
+
+								.raiting__line
+									.raiting__col1
+										.raiting__place 3
+									.raiting__col2
+										img(src="%=static=%img/general/user1.png", alt="").raiting__userpic
+										.raiting__wrapin-col2
+											p.raiting__famili Константин Городилов,
+											p.raiting__town Мельбурн, Австралия
+									.raiting__col3
+										p.raiting__balls 5788
+
+								.raiting__line
+									.raiting__col1
+										.raiting__place 4
+									.raiting__col2
+										img(src="%=static=%img/general/user1.png", alt="").raiting__userpic
+										.raiting__wrapin-col2
+											p.raiting__famili Борис Петров,
+											p.raiting__town Петропавловск-Камчатский, Новая Зеландия
+									.raiting__col3
+										p.raiting__balls 33
+
+								.raiting__line
+									.raiting__col1
+										.raiting__place 5
+									.raiting__col2
+										img(src="%=static=%img/general/user1.png", alt="").raiting__userpic
+										.raiting__wrapin-col2
+											p.raiting__famili Константин Долгополов,
+											p.raiting__town Петропавловск-Камчатский, Новая Зеландия
+									.raiting__col3
+										p.raiting__balls 6
+								.raiting__more-peoples
+									a(href="#").btn.btn-bordo.btn-bordo_more-peoples Все участники 
+		
+					section.community
+						.container
+							h2.community__title вступайте в наши сообщества
+							p.community__note
+								| Следите за ходом проекта в социальных сетях. Там можно узнать о самых актуальных новостях, пообщаться с другими участниками и получить оперативную помощь от организаторов. <br>Подписывайтесь, будем рады видеть вас на страницах в Facebook и «Вконтакте»! 
+							.community__wrap 
+								.community__item
+									script(type='text/javascript', src='//vk.com/js/api/openapi.js?129')
+									// VK Widget 
+									#vk_groups
+									script(type='text/javascript').
+										 VK.Widgets.Group("vk_groups", {mode: 3, width: "auto", height: "400", color1: 'FFFFFF', color2: '000000', color3: '5E81A8'}, 128786609);
+
+								.community__item
+									#fb-root
+									script.
+										(function(d, s, id) {
+										var js, fjs = d.getElementsByTagName(s)[0];
+										if (d.getElementById(id)) return;
+										js = d.createElement(s); js.id = id;
+										js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.7";
+										fjs.parentNode.insertBefore(js, fjs);
+										}(document, 'script', 'facebook-jssdk'));
+									.fb-page(data-href='https://www.facebook.com/openbolshoi/', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true')
+										blockquote.fb-xfbml-parse-ignore(cite='https://www.facebook.com/openbolshoi/')
+											a(href='https://www.facebook.com/openbolshoi/') Открой историю Большого
+
+
+					section.partners-sec
+						.container
+							h2.community__title.community__title_near-part партнеры
+							h3.community__title_ifopart Технологические партнеры
+							.partners
+								.partners__betwin
+									a(href="https://abbyy.com/ru-ru/", rel="nofollow noopener", target="_blank").partners__link
+										img.community__img(src="%=static=%img/general/abby2.png", alt="abbyy")
+									a(href="http://kamis.ru/", rel="nofollow noopener", target="_blank").partners__link
+										img.community__img(src="%=static=%img/general/Logo_Kamis.png", alt="Kamis")
+								
+								.partners__center
+									a(href="http://fujitsu.com/ru/", rel="nofollow noopener", target="_blank").partners__link
+										img.community__img(src="%=static=%img/general/Logo_Fujitsu.png", alt="fujitsu")
+
+							h3.community__title_ifopart Информационные партнеры
+							.partners__betwin.partners__betwin2
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/rayon.png", alt="")
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/24.png", alt="")
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/mosc24.png", alt="")
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/radioros.png", alt="")
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/kultura.png", alt="")
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/vilege.png", alt="") 
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/fm.png", alt="")
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/jurn.png", alt="")
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/project.png", alt="")
+								a(href="#", rel="nofollow noopener", target="_blank").partners__link
+									img.partners__img-logo(src="%=static=%img/general/gismeteo.png", alt="")
+
+					.page__buffer
+
+				.page__footer
+						+footer()
+				.window-wrap#login
+					form.forma(action='#')
+						
+						input.forma__inpt#emlail(type='email', placeholder='Электронная почта *')
+						input.forma__inpt#pass(type='text', placeholder='Пароль *')
+						
+
+						.soc-wide-login.nopad
+							p 
+								a(href="#restore_password").js-fansibox.forma__link  Я забыл пароль
+							button.forma__send.btn Войти
+							p
+							p.soc-wide-login__text Зарегистрироваться с помощью:
+							.soc-wide-login__wrap 
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'vk', className: 'soc-wide-login__vk'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'ok', className: 'soc-wide-login__ok'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'mail', className: 'soc-wide-login__mail'})	
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'fb', className: 'soc-wide-login__fb'})
+							p
+							p 
+								a(href="#login").js-fansibox.forma__link Зарегистрироваться
+
+				.window-wrap#restore_password
+					form.forma(action='#')
+						
+						input#emlail2.forma__inpt(type='email', placeholder='Электронная почта *')
+						input#pass2.forma__inpt(type='text', placeholder='Пароль *')
+						
+
+						.soc-wide-login.nopad
+							button.forma__send.btn Отправить пароль
+							button.forma__send.btn Войти
+							p
+							p.soc-wide-login__text Зарегистрироваться с помощью:
+							.soc-wide-login__wrap 
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'vk', className: 'soc-wide-login__vk'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'ok', className: 'soc-wide-login__ok'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'mail', className: 'soc-wide-login__mail'})
+								a.soc-wide-login__item(href="#")  
+									!= jadeHelpers.Icon.call(locals, {iconName: 'fb', className: 'soc-wide-login__fb'})
+							p
+							p 
+								a(href="#login").js-fansibox.forma__link Зарегистрироваться				
+						
+				.window-wrap#join
+					form.forma(action='#')
+						p.forma__notif Заполняя эту форму, вы соглашаетесь c 
+							a(href="#agree").js-fansibox.forma__agree условиями
+							|  обработки персональных данных
+						input#fio.forma__inpt.forma__inpt_error(type='text', placeholder='ФИО *')
+						input#eml21.forma__inpt(type='email', placeholder='Электронная почта *')
+						input#country.forma__inpt(type='text', placeholder='Cтрана *')
+						input#town.forma__inpt(type='text', placeholder='Город *')
+						input#phone3.forma__inpt(type='tel', placeholder='Телефон')
+ 
+						.filter__checkbox
+							input.filter__chboxhide(type='checkbox', name='subsc', id="sub")
+							label.filter__labl#igra2(for='sub') 
+							span.filter__textchbox#ch1 Подписка на новости
+						.filter__checkbox
+							input.filter__chboxhide(type='checkbox', name='participation', id="participation")
+							label.filter__labl#parti_label(for='participation') 
+							span.filter__textchbox#ch2 Согласен с Условиями участия*  
+							
+						button.forma__send.btn Присоединиться
+
+						.soc-wide-login
+							p.soc-wide-login__text Зарегистрироваться с помощью:
+							.soc-wide-login__wrap 
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'vk', className: 'soc-wide-login__vk'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'ok', className: 'soc-wide-login__ok'})
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'mail', className: 'soc-wide-login__mail'})	
+								a(href="#").soc-wide-login__item 
+									!= jadeHelpers.Icon.call(locals, {iconName: 'fb', className: 'soc-wide-login__fb'})		
+						
+						
+
+				.window-wrap#agree  
+					a(href="#join").js-fansibox Назад
+					p Компания ABBYY означает:
+						<br>
+						| ООО «Аби», 127273, г. Москва, ул. Отрадная, дом 2Б, строение 6, офис 12, для корреспонденции: 127273, а/я 32
+						| Участник проекта, регистрируясь на сайте проекта, дат свое добровольное согласие на сбор, накопление, хранение, обработку, проверку, уточнение, обезличивание, уничтожение своих персональных данных на любом этапе конкурса с использованием средств автоматизации или без таковых в соответствии с ФЗ «О персональных данных».
+						<br> 
+						| Оргкомитет проекта собирает, накапливает, хранит, обрабатывает, проверяет, уточняет, обезличивает и уничтожает персональные данные исключительно в целях организации и проведения проекта. Персональные данные участников, полученные в ходе проведения проекта, не будут использованы в иных целях или переданы третьим лицам. Данное согласие действует  до 31 декабря 2018 года.
+						<br>
+						| Участник проекта может отозвать свое согласие на совершение всех вышеуказанных действий в любой момент, но при этом он перестает участвовать в проекте.
+					
+				.window-wrap.window-wrap__center#thanks
+					h3.window-wrap__title Спасибо за регистрацию!
+					p Вы успешно зарегистрировались! Все подробности мы отправим отдельным письмом во время старта проекта.
+
+					// Google Tag Manager
+					noscript
+						iframe(src='//www.googletagmanager.com/ns.html?id=GTM-WQBZMV', height='0', width='0', style='display:none;visibility:hidden')
+					script.
+						(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+						new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+						j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+						'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+						})(window,document,'script','dataLayer','GTM-WQBZMV');
+					// End Google Tag Manager
+
+				script(src='%=static=%js/separate-js/svg4everybody.min.js')
+				script svg4everybody();
+
+				//- Main scripts. You can replace it, but I recommend you to leave it here
+				script(src='%=static=%js/main%=hash=%%=min=%.js')

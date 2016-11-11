@@ -1,0 +1,166 @@
+----------------2016-11-11 15:05:04----------------
+Array
+(
+    [NAV_OBJECT] => CDBResult Object
+        (
+            [result] => Resource id #211
+            [arResult] => 
+            [arReplacedAliases] => 
+            [arResultAdd] => 
+            [bNavStart] => 
+            [bShowAll] => 
+            [NavNum] => 
+            [NavPageCount] => 
+            [NavPageNomer] => 
+            [NavPageSize] => 
+            [NavShowAll] => 
+            [NavRecordCount] => 
+            [bFirstPrintNav] => 1
+            [PAGEN] => 
+            [SIZEN] => 
+            [SESS_SIZEN] => 
+            [SESS_ALL] => 
+            [SESS_PAGEN] => 
+            [add_anchor] => 
+            [bPostNavigation] => 
+            [bFromArray] => 
+            [bFromLimited] => 
+            [sSessInitAdd] => 
+            [nPageWindow] => 5
+            [nSelectedCount] => 
+            [arGetNextCache] => 
+            [bDescPageNumbering] => 
+            [arUserFields] => 
+            [usedUserFields] => 
+            [SqlTraceIndex] => 
+            [DB] => 
+            [NavRecordCountChangeDisable] => 
+            [is_filtered] => 
+            [nStartPage] => 0
+            [nEndPage] => 0
+            [resultObject] => Bitrix\Main\DB\MysqlResult Object
+                (
+                    [resultFields:protected] => Array
+                        (
+                            [ID] => Bitrix\Main\Entity\IntegerField Object
+                                (
+                                    [is_primary:protected] => 
+                                    [is_unique:protected] => 
+                                    [is_required:protected] => 
+                                    [is_autocomplete:protected] => 
+                                    [column_name:protected] => ID
+                                    [default_value:protected] => 
+                                    [name:protected] => ID
+                                    [dataType:protected] => 
+                                    [initialParameters:protected] => Array
+                                        (
+                                        )
+
+                                    [title:protected] => 
+                                    [validation:protected] => 
+                                    [validators:protected] => 
+                                    [additionalValidators:protected] => Array
+                                        (
+                                        )
+
+                                    [fetchDataModification:protected] => 
+                                    [fetchDataModifiers:protected] => 
+                                    [additionalFetchDataModifiers:protected] => Array
+                                        (
+                                        )
+
+                                    [saveDataModification:protected] => 
+                                    [saveDataModifiers:protected] => 
+                                    [additionalSaveDataModifiers:protected] => Array
+                                        (
+                                        )
+
+                                    [isSerialized:protected] => 
+                                    [parentField:protected] => 
+                                    [entity:protected] => 
+                                )
+
+                        )
+
+                    [connection:protected] => Bitrix\Main\DB\MysqlConnection Object
+                        (
+                            [engine:protected] => 
+                            [sqlHelper:protected] => Bitrix\Main\DB\MysqlSqlHelper Object
+                                (
+                                    [connection:protected] => Bitrix\Main\DB\MysqlConnection Object
+ *RECURSION*
+                                )
+
+                            [sqlTracker:protected] => 
+                            [trackSql:protected] => 
+                            [version:protected] => 
+                            [versionExpress:protected] => 
+                            [host:protected] => openbolshoi.p-w-d.ru
+                            [database:protected] => dbopenbolshoi
+                            [login:protected] => useropenbolshoi
+                            [password:protected] => nCOqpkNi4qCafxB
+                            [initCommand:protected] => 
+                            [options:protected] => 2
+                            [nodeId:protected] => 0
+                            [tableColumnsCache:protected] => Array
+                                (
+                                )
+
+                            [lastQueryResult:protected] => Resource id #211
+                            [queryExecutingEnabled:protected] => 1
+                            [disabledQueryExecutingDump:protected] => 
+                            [resource:protected] => Resource id #53
+                            [isConnected:protected] => 1
+                            [configuration:protected] => Array
+                                (
+                                    [className] => \Bitrix\Main\DB\MysqlConnection
+                                    [host] => openbolshoi.p-w-d.ru
+                                    [database] => dbopenbolshoi
+                                    [login] => useropenbolshoi
+                                    [password] => nCOqpkNi4qCafxB
+                                    [options] => 2
+                                    [include_after_connected] => /Applications/MAMP/htdocs/bolshoy.ru/bitrix/php_interface/after_connect_d7.php
+                                )
+
+                        )
+
+                    [resource:protected] => Resource id #211
+                    [trackerQuery:protected] => 
+                    [converters:protected] => Array
+                        (
+                        )
+
+                    [serializedFields:protected] => Array
+                        (
+                        )
+
+                    [replacedAliases:protected] => Array
+                        (
+                        )
+
+                    [fetchDataModifiers:protected] => Array
+                        (
+                        )
+
+                    [count:protected] => 
+                )
+
+        )
+
+    [ITEMS] => Array
+        (
+            [547] => Array
+                (
+                    [ID] => 547
+                )
+
+            [548] => Array
+                (
+                    [ID] => 548
+                )
+
+        )
+
+)
+
+

@@ -1,0 +1,14 @@
+/* Your custom fonts here */
+
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&subset=cyrillic';
+
+@font-face {
+    font-family: 'flairegular';
+    src: url('../fonts/als_flai-right-webfont.woff') format('woff'),
+         url('../fonts/als_flai-right-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+// Var for using custom font
+$flai: 'flairegular', Helvetica, Arial, sans-serif;

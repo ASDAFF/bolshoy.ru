@@ -1,0 +1,35 @@
+mixin head(data)
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible", content="ie=edge")
+    title #{data.title}
+    meta(content="", name="description")
+    meta(content="", name="keywords")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(content="telephone=no", name="format-detection")
+
+    //- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
+    meta(name="HandheldFriendly", content="true")
+
+    |<!--[if IE 8 ]><link href="%=static=%css/main_ie8%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
+    |<!--[if IE 9 ]><link href="%=static=%css/main_ie9%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
+    |<!--[if (gt IE 9)|!(IE)]><!-->
+    <link href="%=static=%css/separate-css/vegas.min.css" rel="stylesheet" type="text/css">
+    <link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><!--<![endif]-->
+    
+ 
+    if data.useSocialMetaTags
+        meta(property="og:title", content="#{data.title}")
+        meta(property="og:title", content="Открой историю Большого")
+        meta(property="og:url", content="")
+        meta(property="og:description", content="Хотите открыть историю главного театра страны и первым увидеть редчайшие архивы? Присоединяйтесь к проекту!")
+        meta(property="og:image", content="http://bolshoi.p-w-d.ru/bolshoi-history.png")
+        meta(property="og:image:type", content="image/jpeg")
+        meta(property="og:image:width", content="201")
+        meta(property="og:image:height", content="249")
+        meta(property="twitter:description", content="")
+        link(rel="image_src", href="")
+
+    link(rel="icon" type="image/x-icon" href="favicon.ico")
+    script.
+        (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+    |<!--[if lt IE 9 ]><script src="%=static=%js/separate-js/html5shiv-3.7.2.min.js" type="text/javascript"></script><meta content="no" http-equiv="imagetoolbar"><![endif]-->
