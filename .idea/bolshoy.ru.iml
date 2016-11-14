@@ -7,5 +7,15 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://$USER_HOME$/Downloads/bxApiDocs-master/modules" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$USER_HOME$/Downloads/bxApiDocs-master/modules" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

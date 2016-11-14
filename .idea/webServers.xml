@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="6322816c-f0b2-4e30-829d-a661a0c7ca33" name="Hotulev" url="http://151.248.126.92">
+        <fileTransfer host="151.248.126.92" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" accessType="SFTP" username="bitrix" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
