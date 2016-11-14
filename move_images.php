@@ -47,7 +47,9 @@ foreach($arUsers as $arUser){
 		$arNewFile['old_file'] = $arUser['PERSONAL_PHOTO'];
 		$arNewFile['MODULE_ID'] = 'main';
 
-		$bUpdated = $obUser->Update($arUser['ID'], array('PERSONAL_PHOTO' => $arNewFile));
+		if( $result ){
+			$bUpdated = $obUser->Update($arUser['ID'], array('PERSONAL_PHOTO' => $arNewFile));
+		}
 		fclose($file);
 	}
 }

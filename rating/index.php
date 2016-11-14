@@ -43,7 +43,7 @@ $APPLICATION->SetTitle("Рейтинг");
 						"LIST_SHOW_FILTER" => "Y",
 						"SEF_MODE" => "N",
 						"CACHE_TYPE" => "A",
-						"CACHE_TIME" => "3600",
+						"CACHE_TIME" => "0",
 						"SET_TITLE" => "Y"
 					),
 					false

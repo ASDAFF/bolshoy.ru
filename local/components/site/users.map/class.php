@@ -1,5 +1,6 @@
 <?
 
+use Bitrix\Main\Application;
 use \Bitrix\Main\Localization\Loc;
 use Site\Main\Cache;
 use Site\Main\Hlblock\Packets;
@@ -51,6 +52,7 @@ class UsersMap extends CBitrixComponent
 		$arPacketsStatuses = Packets::getInstance()->getPacketsStatuses();
 		$arStatuses = Packets::getPStatusesValId();
 		$arResult['PROGRAMS_COUNT'] = $arPacketsStatuses['STATUSES'][$arStatuses['Принят']];
+		$docRoot = Application::getInstance()->getDocumentRoot();
 
 		/*Получаем пользователей*/
 		$rsUsers = \CUser::GetList(($by = 'ID'), ($order = 'ASC'), array('ACTIVE' => 'Y'), array('FIELDS' => array('ID', 'PERSONAL_COUNTRY', 'PERSONAL_CITY', 'PERSONAL_PHOTO'), 'SELECT' => array('UF_*')));
@@ -63,11 +65,16 @@ class UsersMap extends CBitrixComponent
 			$arResult['ITEMS'][$arUser['ID']] = $arUser;
 			$countryRefId = array_search($arUser['PERSONAL_COUNTRY'], $arCountries['reference_id']);
 
+			$arCity = array('POSITION' => $arUser['PERSONAL_CITY'] . ', ' . $arCountries['reference'][$countryRefId]);
+			$arPhoto = \CFile::GetFileArray($arUser['PERSONAL_PHOTO']);
 			/*Формируем список городов для запроса координат.*/
-			$arResult['CITIES'][] = array(
-				'POSITION' => $arUser['PERSONAL_CITY'] . ', ' . $arCountries['reference'][$countryRefId],
-				'IMAGE' => \CFile::ResizeImageGet($arUser['PERSONAL_PHOTO'], array('width' => 44, 'height' => 44), BX_RESIZE_IMAGE_EXACT)
-			);
+			if( !empty($arPhoto['SRC']) && file_exists($docRoot . $arPhoto['SRC']) ){
+				$arCity['IMAGE'] = \CFile::ResizeImageGet($arUser['PERSONAL_PHOTO'], array('width' => 44, 'height' => 44), BX_RESIZE_IMAGE_EXACT);
+			}
+			else{
+				$arCity['IMAGE'][] = '';
+			}
+			$arResult['CITIES'][] = $arCity;
 
 			/*
 			 * Формируем масиив адресов для дальнейщего геокодирования.

@@ -1,4 +1,5 @@
 <?
+use Bitrix\Main\Application;
 use Bitrix\Main\Localization\Loc;
 
 if( !defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true ) {
@@ -11,6 +12,7 @@ if( empty( $arResult["USERS"] ) ) {
 
 	return;
 }
+$docRoot = Application::getInstance()->getDocumentRoot();
 
 ?><section class="raiting" id="rating">
 	<div class="container container_raiting">
@@ -28,7 +30,7 @@ if( empty( $arResult["USERS"] ) ) {
 			$i = 1;
 			foreach($arResult['USERS'] as $arUser){
 				$src = $arUser['PERSONAL_PHOTO']['src'];
-				if (!$src) {
+				if( !$src || !file_exists($docRoot . $src) ) {
 					$src = SITE_TEMPLATE_PATH . '/images/avatar.png';
 				}
 				?><div class="raiting__line">

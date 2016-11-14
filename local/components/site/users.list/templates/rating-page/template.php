@@ -1,4 +1,5 @@
 <?
+use Bitrix\Main\Application;
 use Bitrix\Main\Localization\Loc;
 
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) {
@@ -10,6 +11,7 @@ if (empty($arResult["USERS"])) {
     ShowError(GetMessage("NO_ITEMS_FOUNDED"));
     return;
 }
+$docRoot = Application::getInstance()->getDocumentRoot();
 ?>
 <section class="raiting raiting_full-width">
     <div class="container container_raiting">
@@ -33,21 +35,12 @@ if (empty($arResult["USERS"])) {
                 if($arUser['NAME']) {
                     $name = $arUser['NAME'];
                 }
-                /*if ($arUser['NAME'] && $arUser['LAST_NAME']) {
-                    $name = sprintf('%s %s,', $arUser['NAME'], $arUser['LAST_NAME']);
-                }
-                elseif ($arUser['NAME'] && !$arUser['LAST_NAME']) {
-                    $name = sprintf('%s,', $arUser['NAME']);
-                }
-                elseif (!$arUser['NAME'] && $arUser['LAST_NAME']) {
-                    $name = sprintf('%s,', $arUser['LAST_NAME']);
-                }*/
                 else {
                     $name = 'Нет имени';
                 }
                 // картинка
                 $src = $arUser['PERSONAL_PHOTO']['src'];
-                if (!$src) {
+                if( !$src || !file_exists($docRoot . $src) ) {
                     $src = SITE_TEMPLATE_PATH . '/images/avatar.png';
                 }
                 ?>
